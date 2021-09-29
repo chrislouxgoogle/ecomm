@@ -191,9 +191,7 @@ view: users {
     label: "SSN Last 4"
     description: "Only users with sufficient permissions will see this data"
     type: string
-    sql: CASE WHEN '{{_user_attributes["can_see_sensitive_data"]}}' = 'Yes'
-                THEN ${ssn}
-                ELSE '####' END;;
+
   }
 
   ## MEASURES ##
